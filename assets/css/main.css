@@ -261,16 +261,16 @@ ul#menu li:after {
 }
 
 ul#menu li:nth-child(1) {
-	background-image: url(../img/accion-3.jpg);
+	background-image: url(../img/movies/el-renacido.jpg);
 	background-size: cover;
 }
 
 ul#menu li:nth-child(2) {
-	background-image: url(../img/infantil-1.jpg);
+	background-image: url(../img/movies/sing.jpg);
 	background-size: cover;
 }
 
 ul#menu li:nth-child(3) {
-	background-image: url(../img/terror-1.jpg);
+	background-image: url(../img/movies/robert.jpg);
 	background-size: cover;
 }
