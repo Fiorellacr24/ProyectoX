@@ -2,8 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
+
+header  {
+	height: 90px;
+}
+
 nav {
-  padding: 20px 50px;
+	height: 100%;
+  padding: 0 50px;
   font-size: 13px;
   text-align: center;
   background: #607d8b;
@@ -40,19 +46,21 @@ nav {
   visibility: hidden;
 }
 .menu li .sub-menu li {
-  background: #607d8b;
+  background: #666;
   display: block;
-  color: blue;
+  color: #fff;
   text-shadow: 0 -1px 0 #000;
 }
 .menu li
 .sub-menu li:hover {
-  background: #666;
+  background: #607d8b;
+	opacity: 1;
 }
 .menu li:hover
 .sub-menu {
+	background: #666;
   display: block;
-  opacity: 1;
+  opacity: 0.7;
   visibility: visible;
 }
 /* social bar*/
@@ -95,18 +103,30 @@ i{
 .icon:last-child{
 	border-radius: 0 0 0 1rem;
 }
-/* grid */
-.grid{
-  position: relative;
-  width: 50%;
+
+/*Galery*/
+article {
+	width: 100%;
+	height: 572px;
+	background-image: url(../img/cinema.jpg);
+	text-align: center;
+	background-size: cover;
 }
 
+article ul {
+	margin: 30px 0;
+}
+
+.grid{
+  position: relative;
+  width: 20%;
+	display: inline-block;
+	text-align: center;
+}
 .grid img {
   display: block;
   width: 100%;
-  height: auto;
 }
-
 .transition {
   position: absolute;
   bottom: 100%;
@@ -118,12 +138,10 @@ i{
   height:0;
   transition: .5s ease;
 }
-
 .grid:hover .transition {
   bottom: 0;
   height: 100%;
 }
-
 .text {
   color: white;
   font-size: 18px;
@@ -255,51 +273,4 @@ ul#menu li:nth-child(2) {
 ul#menu li:nth-child(3) {
 	background-image: url(../img/terror-1.jpg);
 	background-size: cover;
-}
-
-/* grid */
-.gallery{
-	text-align: center;
-	margin: 60px auto;
-}
-
-.gallery ul {
-	margin: 30px 0;
-}
-
-.grid{
-  position: relative;
-  width: 25%;
-	display: inline-block;
-	text-align: center;
-}
-.grid img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.transition {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: rgba(43, 46, 47, 0.70);
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-}
-.grid:hover .transition {
-  bottom: 0;
-  height: 100%;
-}
-.text {
-  color: white;
-  font-size: 18px;
-  font-family: sans-serif;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
