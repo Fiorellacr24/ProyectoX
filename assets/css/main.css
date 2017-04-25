@@ -1,5 +1,27 @@
-nav li{
-	display: inline;
-	text-decoration: none;
-	padding: 50px;
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav-bar{
+	background-color: #ffeb3b;
+	position: relative;
+	min-height: 50px;
+}
+.menu{
+	font-size:15px;
+	font-weight:700;
+}
+.menu li{
+	float: left;
+	border-radius:3px;
+	display:inline-block;
+	padding-bottom: 10px;
+	margin-top:20px;
+	color:#263644;
+}
+
+.menu li :hover, 
+.menu li .active{
+	color:#ffffff;
+	background:#77CCA4;
 }
