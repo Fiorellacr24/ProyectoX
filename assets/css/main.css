@@ -2,28 +2,57 @@
 	margin: 0;
 	padding: 0;
 }
-.nav-bar{
-	background-color: #ffeb3b;
-	position: relative;
-	min-height: 50px;
-}
-.menu{
-	font-size:15px;
-	font-weight:700;
-}
-.menu li{
-	float: left;
-	border-radius:3px;
-	display:inline-block;
-	padding-bottom: 10px;
-	margin-top:20px;
-	color:#263644;
+nav {
+  padding: 20px 50px;
+  font-size: 13px;
+  text-align: center;
+  background: #607d8b;
 }
 
-.menu li :hover,
-.menu li .active{
-	color:#ffffff;
-	background:#77CCA4;
+.menu {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+}
+.menu li {
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  transition: all 0.2s;
+}
+.menu li:hover {
+  background: #555;
+  color: #fff;
+}
+.menu li .sub-menu {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu li .sub-menu li { 
+  background: #607d8b; 
+  display: block; 
+  color: blue;
+  text-shadow: 0 -1px 0 #000;
+}
+.menu li 
+.sub-menu li:hover { 
+  background: #666; 
+}
+.menu li:hover 
+.sub-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* carusel*/
