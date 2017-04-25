@@ -39,17 +39,17 @@ nav {
   opacity: 0;
   visibility: hidden;
 }
-.menu li .sub-menu li { 
-  background: #607d8b; 
-  display: block; 
+.menu li .sub-menu li {
+  background: #607d8b;
+  display: block;
   color: blue;
   text-shadow: 0 -1px 0 #000;
 }
-.menu li 
-.sub-menu li:hover { 
-  background: #666; 
+.menu li
+.sub-menu li:hover {
+  background: #666;
 }
-.menu li:hover 
+.menu li:hover
 .sub-menu {
   display: block;
   opacity: 1;
@@ -242,8 +242,64 @@ ul#menu li:after {
   -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0,0,0,.5)), to(rgba(0,0,0,0)));
 }
 
-ul#menu li:nth-child(1) { background-image: url(../img/accion-3.jpg); }
+ul#menu li:nth-child(1) {
+	background-image: url(../img/accion-3.jpg);
+	background-size: cover;
+}
 
-ul#menu li:nth-child(2) { background-image: url(../img/infantil-1.jpg); }
+ul#menu li:nth-child(2) {
+	background-image: url(../img/infantil-1.jpg);
+	background-size: cover;
+}
 
-ul#menu li:nth-child(3) { background-image: url(../img/terror-1.jpg); }
+ul#menu li:nth-child(3) {
+	background-image: url(../img/terror-1.jpg);
+	background-size: cover;
+}
+
+/* grid */
+.gallery{
+	text-align: center;
+	margin: 60px auto;
+}
+
+.gallery ul {
+	margin: 30px 0;
+}
+
+.grid{
+  position: relative;
+  width: 25%;
+	display: inline-block;
+	text-align: center;
+}
+.grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.transition {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(43, 46, 47, 0.70);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+.grid:hover .transition {
+  bottom: 0;
+  height: 100%;
+}
+.text {
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
