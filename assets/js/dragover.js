@@ -1,22 +1,22 @@
-var mousePosition = document.getElementsByTagName("article");
-var dragover = document.getElementById("dragover");
 
-mousePosition.addEventListener("mouseover", function(event) {
-//event.preventDefault();
+var dragOver = document.getElementById("dragover");
+var dragContent = document.getElementById("content-dragover");
+var pCopy = document.getElementById("copy");
 
-
+document.addEventListener("dragstart", function(event) {
+	event.dataTransfer.setData("Data", event.target.id);
+	pCopy.style.display = "block";
 });
 
-
-/*
-var figure = document.getElementsByClassName('grid')[0];
-var dragover = document.getElementById("dragover");
-(function() {
-	figure.hover(function() {
-    dragover.toggleClass("hover");
-  }, function() {
-    // on mouseout, reset the background colour
-    dragover.toggleClass("hover");
-  });
+dragOver.addEventListener("drop", function(event) {
+	event.preventDefault();
+	var data = event.dataTransfer.getData("Data");
+	event.target.appendChild(document.getElementById(data));
+	pCopy.style.display = "block";
 });
-*/
+
+dragOver.addEventListener("dragover", function(event) {
+	event.preventDefault();
+});
+
+var myMovies = document.getElementById("myMovies");

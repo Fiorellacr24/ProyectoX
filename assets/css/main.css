@@ -119,7 +119,7 @@ i{
 .icon:last-child{
 	border-radius: 0 0 0 1rem;
 }
-/* Modal */ 
+/* Modal */
 .modal{
   display: none;
   position: fixed;
@@ -128,8 +128,8 @@ i{
   padding-top: 100px;
   top: 0;
   left: 0;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   overflow: auto;
   overflow-x: hidden;
   z-index: 1000;
@@ -195,29 +195,35 @@ article ul {
   transform: translate(-50%, -50%);
 }
 
-#dragover {
-	width: 9px;
+#content-dragover {
+	width: 0;
 	height: 165px;
 	background-color: rgba(255, 255, 255,0.4);
 	float: right;
 	-webkit-transition: width 0.5s;
-	transition: width 0.5s;
+	transition: width 0.7s;
 	z-index: 2000;
-	border-style: dotted;
+	box-sizing: border-box;
 }
 
-#dragover p {
-	margin: 15px;
-	font-size: 28px;
+#content-dragover p {
+	font-size: 16px;
+	position: relative;
+	bottom: 0
 }
 
-article:hover #dragover {
-  width: 200px;
+#dragover {
+	width: 194px;
+	height: 149px;
+	position: absolute;
+	margin-top: 50px;
 }
+
 /* carusel*/
 .categories {
 	text-align: center;
-	margin: 30px auto;
+	margin: 0 auto;
+	padding: 70px 0;
 }
 
 ul, li {
@@ -225,7 +231,7 @@ ul, li {
 	display: inline-block;
 }
 
-ul #menu {
+ul #myMovies {
 	padding: 0;
 	margin: 0;
   -moz-perspective: 780px;
@@ -234,13 +240,13 @@ ul #menu {
 	background-color: transparent;
 }
 
-#menu li a {
+#myMovies li a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-#menu li {
+#myMovies li {
   text-indent: -9999px;
   position: relative;
   display: inline-block;
@@ -263,9 +269,9 @@ ul #menu {
   box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 0 30px rgba(0,0,0,0.2);
 }
 
-ul#menu li:last-child { z-index: 45; }
+ul#myMovies li:last-child { z-index: 45; }
 
-ul#menu li.highlighted {
+ul#myMovies li.highlighted {
   -moz-transform: rotateY(0deg) scale(1.2);
   -webkit-transform: rotateY(0deg) scale(1.2);
   transform: rotateY(0deg) scale(1.2);
@@ -273,44 +279,44 @@ ul#menu li.highlighted {
 	margin-bottom: -350px;
 }
 
-ul#menu .highlighted ~ li {
+ul#myMovies .highlighted ~ li {
   -moz-transform: rotateY(-45deg);
   -webkit-transform: rotateY(-45deg);
   transform: rotateY(-45deg);
 }
 
-ul#menu li:hover,
-ul#menu li:first-child:hover,
-ul#menu li.highlighted ~ li:hover { z-index: 60!important; }
+ul#myMovies li:hover,
+ul#myMovies li:first-child:hover,
+ul#myMovies li.highlighted ~ li:hover { z-index: 60!important; }
 
-ul#menu li:hover {
+ul#myMovies li:hover {
   -moz-transform: rotateY(0deg) scale(1.2);
   -webkit-transform: rotateY(0deg) scale(1.2);
   transform: rotateY(0deg) scale(1.2);
   opacity: 1;
 }
 
-ul#menu li:hover ~ li {
+ul#myMovies li:hover ~ li {
   -moz-transform: rotateY(-45deg);
   -webkit-transform: rotateY(-45deg);
   transform: rotateY(-45deg);
 }
 
-ul#menu:hover li:not(:hover) {
+ul#myMovies:hover li:not(:hover) {
   -moz-transform: rotateY(45deg);
   -webkit-transform: rotateY(45deg);
   transform: rotateY(45deg);
 }
 
-ul#menu:hover li:hover ~ li {
+ul#myMovies:hover li:hover ~ li {
   -moz-transform: rotateY(-45deg);
   -webkit-transform: rotateY(-45deg);
   transform: rotateY(-45deg);
 }
 
-ul#menu:not(:hover) li.highlighted { opacity: 1; }
+ul#myMovies:not(:hover) li.highlighted { opacity: 1; }
 
-ul#menu li:after {
+ul#myMovies li:after {
   content: "";
   width: 200px;
   height: 20px;
@@ -321,17 +327,17 @@ ul#menu li:after {
   -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0,0,0,.5)), to(rgba(0,0,0,0)));
 }
 
-ul#menu li:nth-child(1) {
+ul#myMovies li:nth-child(1) {
 	background-image: url(../img/movies/el-renacido.jpg);
 	background-size: cover;
 }
 
-ul#menu li:nth-child(2) {
+ul#myMovies li:nth-child(2) {
 	background-image: url(../img/movies/sing.jpg);
 	background-size: cover;
 }
 
-ul#menu li:nth-child(3) {
+ul#myMovies li:nth-child(3) {
 	background-image: url(../img/movies/robert.jpg);
 	background-size: cover;
 }

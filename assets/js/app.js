@@ -29,6 +29,8 @@ window.addEventListener("load", function(event) {
 		for (var obj in arr) {
 			var div =	document.createElement("div");
 			div.classList.add("grid");
+			div.setAttribute("draggable", "true");
+			div.setAttribute("id", "dragtarget");
 			var img = document.createElement("img");
 			img.classList.add("img-grid");
 			img.setAttribute("src", arr[obj].url);
@@ -62,6 +64,8 @@ window.addEventListener("load", function(event) {
 		} else {
 			changeGrid(moviesAccion);
 		}
+		  dragContent.style.width = "200px"; //desplegar dragover
+			dragContent.style.border = "dotted";
 	});
 
 	filter[1].addEventListener("click", function(event){
@@ -70,6 +74,8 @@ window.addEventListener("load", function(event) {
 		} else {
 			changeGrid(moviesTerror);
 		}
+		dragContent.style.width = "200px";
+		dragContent.style.border = "dotted";
 	});
 
 	filter[2].addEventListener("click", function(event){
@@ -78,6 +84,8 @@ window.addEventListener("load", function(event) {
 		} else {
 			changeGrid(moviesInfantil);
 		}
+		dragContent.style.width = "200px";
+		dragContent.style.border = "dotted";
 	});
 
 
