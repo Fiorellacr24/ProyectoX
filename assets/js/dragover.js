@@ -18,5 +18,3 @@ dragOver.addEventListener("drop", function(event) {
 dragOver.addEventListener("dragover", function(event) {
 	event.preventDefault();
 });
-
-var myMovies = document.getElementById("myMovies");

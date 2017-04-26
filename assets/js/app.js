@@ -22,8 +22,9 @@ window.addEventListener("load", function(event) {
 												 sinopsis:"Sinopsis: Narra la historia de una madre soltera que deberá hacerse cargo ella sola de la educación de su hijo, un niño superdotado"}];
 
 
-	var filter = document.getElementsByTagName('a'); //Anchors para filtrar grids.
+	var filter = document.getElementsByClassName("filter"); //Anchors para filtrar grids.
 	var grid = document.getElementById('content-grid');
+	var contVideo = document.getElementById("cont-video");
 
 	function createGrid(arr) {
 		for (var obj in arr) {
@@ -66,6 +67,7 @@ window.addEventListener("load", function(event) {
 		}
 		  dragContent.style.width = "200px"; //desplegar dragover
 			dragContent.style.border = "dotted";
+			contVideo.style.display = "none";
 	});
 
 	filter[1].addEventListener("click", function(event){
@@ -76,6 +78,7 @@ window.addEventListener("load", function(event) {
 		}
 		dragContent.style.width = "200px";
 		dragContent.style.border = "dotted";
+		contVideo.style.display = "none";
 	});
 
 	filter[2].addEventListener("click", function(event){
@@ -86,7 +89,12 @@ window.addEventListener("load", function(event) {
 		}
 		dragContent.style.width = "200px";
 		dragContent.style.border = "dotted";
+		contVideo.style.display = "none";
 	});
 
+	var socialBar = document.getElementsByClassName("social-bar")[0];
+	socialBar.addEventListener("mouseover", function(event){
+		socialBar.style.width = "60px";
+	});
 
 });

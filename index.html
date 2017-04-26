@@ -20,7 +20,7 @@
 					<li>
 						Usuario
 						<ul class="sub-menu">
-							<li>Mi perfil</li>
+							<li><a href="#categories">Mi perfil</a></li>
 							<li>Mi colección</li>
 						</ul>
 					</li>
@@ -30,7 +30,7 @@
 		</nav>
 	</header>
 	<section class="grid-busqueda">
-		
+
 	</section>
 	<div class="social-bar">
 		<i class="icon-twitter"></i>
@@ -39,14 +39,13 @@
 	</div>
 	<article>
 		<div id="cont-video">
-			<span>Nuevo ingreso</span><br>
 				<video src="assets/video/Sign.mp4" autoplay loop muted>
 				</video>
 		</div>
 			<ul>
-				<li><a href="#" id="accion">Acción</a></li>
-				<li><a href="#" id="terror">Terror</a></li>
-				<li><a href="#" id="infantiles">Infantiles</a></li>
+				<li><a id="accion" class="filter">Acción</a></li>
+				<li><a id="terror" class="filter">Terror</a></li>
+				<li><a id="infantiles" class="filter">Infantiles</a></li>
 			</ul>
 			<div id="content-grid"></div>
 			<div id="content-dragover">
@@ -62,7 +61,7 @@
         </div>
       </div>
       <!--Modal-->
-	<section class="categories">
+	<section class="categories" id="categories">
 		<ul id="myMovies">
 			<li><a class="collection" name="El Renacido" href="#modal">Item 2</a></li>
 			<li class="highlighted"><a class="collection" name="Sing" href="#modal"></a></li>

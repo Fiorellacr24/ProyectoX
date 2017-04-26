@@ -11,6 +11,10 @@ body {
 	overflow-x: hidden;
 }
 
+h1 {
+	font-size: 50px;
+}
+
 header  {
   font-family: 'Indie Flower', cursive;
   height: 90px;
@@ -40,8 +44,7 @@ nav {
 }
 .menu li:hover:first-child,
 .menu li:hover:last-child {
-  background: rgba(255, 87, 34, 0.85);
-  color: #fff;
+  color: rgba(255, 87, 34, 0.85);
 }
 .menu li:last-child{
   float: right;
@@ -85,6 +88,7 @@ nav {
 }
 /* social bar*/
 .social-bar{
+	width: 20px;
   position: fixed;
   left: 0;
   top: 35%;
@@ -93,6 +97,8 @@ nav {
   flex-direction: column;
   align-items: flex-end;
   z-index: 100;
+	-webkit-transition: width 0.5s;
+	transition: width 0.7s;
 }
 
 i{
@@ -152,9 +158,9 @@ i{
 }
 /* Video */
 #cont-video{
-  width: 70%;
-  height: 70%;
-  margin: auto;
+  width: 100%;
+  height: 560px;
+	overflow: hidden;
 }
 
 #cont-video span{
@@ -163,14 +169,18 @@ i{
 }
 #cont-video video{
   width: 100%;
-  height: 100%;
+  height: 730px;
 }
 
 /*Galery*/
+.filter {
+	cursor: pointer;
+}
+
 article {
 	font-family: 'Raleway', sans-serif;
   width: 100%;
-  height: 572px;
+  height: 772px;
   background-image: url(../img/cinema.jpg);
   text-align: center;
   background-size: cover;
@@ -181,7 +191,7 @@ article ul {
 }
 
 article ul li a{
-  font-family: 'Raleway', sans-serif; 
+  font-family: 'Raleway', sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -204,6 +214,7 @@ article ul li a{
   background-color: rgba(43, 46, 47, 0.70);
   overflow: hidden;
   width: 100%;
+	padding: 5px;
   height:0;
   transition: .5s ease;
 }
@@ -371,7 +382,7 @@ ul#myMovies li:nth-child(3) {
 
 footer{
   background-color: rgba(43, 46, 47, 0.86);
-  font-family: monospace; 
+  font-family: monospace;
   text-align: center;
   font-size: 14px;
   color: white;
