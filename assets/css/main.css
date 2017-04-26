@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
 *{
 	margin: 0;
 	padding: 0;
@@ -9,7 +12,8 @@ body {
 }
 
 header  {
-	height: 90px;
+  font-family: 'Indie Flower', cursive;
+  height: 90px;
 }
 
 nav {
@@ -35,7 +39,7 @@ nav {
   cursor: pointer;
 }
 .menu li:hover:first-child,
-      li:hover:last-child {
+.menu li:hover:last-child {
   background: rgba(255, 87, 34, 0.85);
   color: #fff;
 }
@@ -61,11 +65,11 @@ nav {
 .menu li
 .sub-menu li:hover {
   background: #607d8b;
-	opacity: 1;
+  opacity: 1;
 }
 .menu li:hover
 .sub-menu {
-	background: #666;
+  background: #666;
   display: block;
   opacity: 0.7;
   visibility: visible;
@@ -81,50 +85,50 @@ nav {
 }
 /* social bar*/
 .social-bar{
-	position: fixed;
-	left: 0;
-	top: 35%;
-	font-size: 20px;
-	display: inline-flex;
-	flex-direction: column;
-	align-items: flex-end;
-	z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 35%;
+  font-size: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
 }
 
 i{
-	text-decoration: none;
-	padding: 20px;
-	display: flex;
-	transition: all .5s;
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  transition: all .5s;
 }
 .icon-twitter,
 .icon-facebook,
 .icon-instagram{
-	background-color: #bdbdbd;
+  background-color: #bdbdbd;
 }
 
 .icon-twitter:hover{
-	color: #339DC5;
+  color: #339DC5;
 }
 .icon-facebook:hover{
-	color: #2E406E;
+  color: #2E406E;
 }
 .icon-instagram:hover{
-	color: #3F60A5;
+  color: #3F60A5;
 }
 
 .icon:firs-child{
-	border-radius: 1rem 0 0 0;
+  border-radius: 1rem 0 0 0;
 }
 .icon:last-child{
-	border-radius: 0 0 0 1rem;
+  border-radius: 0 0 0 1rem;
 }
 /* Modal */
 .modal{
   display: none;
   position: fixed;
-  z-index:1;
-  background: #04B486;
+  background-image: url("../img/fond-thriller.jpg");
+  background-repeat: no-repeat;
   padding-top: 100px;
   top: 0;
   left: 0;
@@ -146,17 +150,40 @@ i{
   width: 20px;
   position: absolute;
 }
+/* Video */
+#cont-video{
+  width: 70%;
+  height: 70%;
+  margin: auto;
+}
+
+#cont-video span{
+  font-size: 1.5rem;
+  color: white;
+}
+#cont-video video{
+  width: 100%;
+  height: 100%;
+}
+
 /*Galery*/
 article {
-	width: 100%;
-	height: 572px;
-	background-image: url(../img/cinema.jpg);
-	text-align: center;
-	background-size: cover;
+	font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 572px;
+  background-image: url(../img/cinema.jpg);
+  text-align: center;
+  background-size: cover;
 }
 
 article ul {
-	margin: 20px 0;
+  margin: 20px 0;
+}
+
+article ul li a{
+  font-family: 'Raleway', sans-serif; 
+  text-decoration: none;
+  color: white;
 }
 
 .grid{
@@ -340,4 +367,21 @@ ul#myMovies li:nth-child(2) {
 ul#myMovies li:nth-child(3) {
 	background-image: url(../img/movies/robert.jpg);
 	background-size: cover;
+}
+
+footer{
+  background-color: rgba(43, 46, 47, 0.86);
+  font-family: monospace; 
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  position: relative;
+}
+
+footer p{
+  margin: auto;
+  padding-top: 20px;
 }
